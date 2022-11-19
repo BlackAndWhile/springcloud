@@ -1,0 +1,30 @@
+EurekaServer:注册中心，用来存放服务
+EurekaClient:服务提供者,把服务注册进注册中心
+RestTemplate:(一个普通消费者)使用RestFul调用服务提供者里面的方法
+consumer:服务消费者,代码本质与EurekaClient相同,使用RestFul调用服务提供者EurekaClient里面的方法
+同理，别人也可以去调consumer里面的方法
+
+Zuul 网关
+Ribbon:负载均衡 只提供负载均衡功能
+feign：feign.hystrix.enabled：是否开启熔断器。提供负载均衡功能
+Hystrix 熔断机制
+NativeConfigServer 配置服务中心  提供配置文件
+    profiles.active：配置文件的获取方式
+    cloud.config.server.native.search-locations：本地配置文件存放的路径
+
+NativeConfigClient  客户端 读取配置中心的配置
+    cloud.config.uri：本地 Config Server 的访问路径
+    cloud.config.fail-fase：设置客户端优先判断 Config Server 获取是否正常。
+    通过spring.application.name 结合spring.profiles.active拼接目标配置文件名，
+    configclient-dev.yml，去 Config Server 中查找该文件。
+
+#本地读取，出现问题，出现无法注入问题，不知道为啥
+
+#远程配置
+
+
+
+
+
+
+

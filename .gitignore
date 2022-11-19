@@ -1,0 +1,10 @@
+# 项目排除路径
+/consumer/target/
+/EurekaClient/target/
+/EurekaServe/target/
+/feign/target/
+/Hystrix/target/
+/NativeConfigClient/target/
+/NativeConfigServer/target/
+/Ribbon/target/
+/Zuul/target/
