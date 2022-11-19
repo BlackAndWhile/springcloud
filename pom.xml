@@ -19,6 +19,8 @@
         <module>Hystrix</module>
         <module>NativeConfigServer</module>
         <module>NativeConfigClient</module>
+        <module>ConfigServer</module>
+        <module>ConfigCLient</module>
     </modules>
 
     <properties>

@@ -18,10 +18,27 @@ NativeConfigClient  客户端 读取配置中心的配置
     通过spring.application.name 结合spring.profiles.active拼接目标配置文件名，
     configclient-dev.yml，去 Config Server 中查找该文件。
 
-#本地读取，出现问题，出现无法注入问题，不知道为啥
+#本地读取，出现问题，出现无法注入问题，@Value("${foo}")等注解出现了问题
 
 #远程配置
 
+
+
+
+spring.cloud.config.name：当前服务注册在 Eureka Server 上的名称，与远程仓库的配置文件名对应。
+
+spring.cloud.config.label：Git Repository  的分支。
+
+spring.cloud.config.discovery.enabled：是否开启 Config 服务发现支持。
+
+spring.cloud.config.discovery.service-id：配置中心在 Eureka Server 上注册的名称。
+
+zipkin
+    服务跟踪
+    Spring Cloud Zipkin
+    Zipkin 是一个可以采集并且跟踪分布式系统中请求数据的组件，
+    让开发者可以更加直观的监控到请求在各个微服务所耗费的时间等，
+    Zipkin：Zipkin Server、Zipkin Client。
 
 
 
